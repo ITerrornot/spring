@@ -13,17 +13,18 @@
    http://www.springframework.org/schema/tx/spring-tx-3.0.xsd
    http://www.springframework.org/schema/context      
    http://www.springframework.org/schema/context/spring-context-3.0.xsd">
-  	
-  	<!-- 使用xml注解方式 -->
-  	<bean name="user" class="cn.itcast.xc.pojo.User">
+  		<!-- 使用xml配置方式经行组件扫描 -->
+   	<!-- <bean name="user" class="c.User"> -->
   		<!-- 给对象注入属性 -->
-  		<property name="name" value="TOM"></property>
-  		<property name="age" value="27"></property>
+  		<!-- <property name="name" value="TOM"></property>
+  		     <property name="age" value="27"></property> -->
   		<!-- 将book对象注入进来 -->
-  		<property name="book" ref="book"></property>
+  		<!-- <property name="book" ref="book"></property>
   	</bean>
     <bean id="book" class="cn.itcast.xc.pojo.Book">
     	<property name="name" value="Old man and sea"></property>
     	<property name="price" value="30.5"></property>
-    </bean>
+    </bean> -->
+  <!-- 使用注解方式进行扫描 ，此时对象属性需要在类中自己设置-->
+   <context:component-scan base-package="cn.itcast.xc.pojo"></context:component-scan>
 </beans>

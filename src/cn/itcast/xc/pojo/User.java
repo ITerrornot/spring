@@ -1,11 +1,17 @@
 package cn.itcast.xc.pojo;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
+
 /*
  * 普通实体类
  */
+@Component("user")
 public class User {
 	private int id;
-	private String name;
-	private int age;
+	private String name="SEM";
+	private int age=28;
+	@Autowired
 	private Book book;
 	public Book getBook() {
 		return book;

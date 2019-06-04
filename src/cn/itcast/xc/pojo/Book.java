@@ -1,9 +1,12 @@
 package cn.itcast.xc.pojo;
 
+import org.springframework.stereotype.Component;
+
+@Component("book")
 public class Book {
 	private int id;
-	private String name;
-	private float price;
+	private String name="FLOWER";
+	private float price=56.9f;
 	public int getId() {
 		return id;
 	}
